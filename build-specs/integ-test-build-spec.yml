@@ -3,10 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo "lambda install"
       - npm install -g npm
       - npm install
+      - find . | grep -v node_modules
   build:
     commands:
+      - echo "lambda build"
+      - find . | grep -v node_modules
       - npm run test
 
 reports:
